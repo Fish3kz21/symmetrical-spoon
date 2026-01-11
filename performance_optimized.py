@@ -140,10 +140,9 @@ def has_negative_slow(numbers):
 
 # OPTIMIZATION 14: Avoid repeated attribute lookups
 def process_items_fast(items):
-    """Efficient: cache method reference"""
-    append = [].__class__.append  # Cache method reference
+    """Efficient: cache method reference to avoid repeated attribute lookups"""
     result = []
-    append_result = result.append
+    append_result = result.append  # Cache method reference
     for item in items:
         append_result(item * 2)
     return result
