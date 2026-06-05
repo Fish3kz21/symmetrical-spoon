@@ -13,7 +13,7 @@ def fast_string_concatenation(n=10000):
     Efficient: Using join() with a list
     Time Complexity: O(n)
     """
-    return ",".join(str(i) for i in range(n))
+    return ",".join(str(i) for i in range(n)) + ","
 
 
 # OPTIMIZATION 2: Use sets for O(1) lookups
@@ -41,6 +41,8 @@ def calculate_fibonacci_fast(n):
 
 def process_data_with_cached_computation(data):
     """Efficient: Compute expensive operations once"""
+    if not data:
+        return []
     average = sum(data) / len(data)  # Computed once
     return [item for item in data if item > average]
 
