@@ -4,7 +4,6 @@ These are examples of SLOW and INEFFICIENT implementations.
 """
 
 import time
-import random
 
 
 # ISSUE 1: Inefficient list concatenation in a loop
@@ -20,7 +19,7 @@ def slow_string_concatenation(n=10000):
 
 
 # ISSUE 2: Nested loops with unnecessary iterations
-def find_duplicates_slow(list1, list2):
+def find_common_elements_slow(list1, list2):
     """
     Inefficient: O(n*m) complexity for finding common elements
     """
@@ -57,7 +56,7 @@ def process_data_with_repeated_computation(data):
     return results
 
 # Issue 5: Poor algorithm choice
-def find_duplicates_slow(arr):
+def find_duplicates_in_array_slow(arr):
     """O(n²) algorithm for finding duplicates"""
     duplicates = []
     for i in range(len(arr)):

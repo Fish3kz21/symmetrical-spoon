@@ -3,7 +3,6 @@ This file demonstrates OPTIMIZED versions of the performance issues.
 These implementations are FAST and EFFICIENT.
 """
 
-import time
 from functools import lru_cache
 
 
@@ -41,6 +40,8 @@ def calculate_fibonacci_fast(n):
 
 def process_data_with_cached_computation(data):
     """Efficient: Compute expensive operations once"""
+    if not data:
+        return []
     average = sum(data) / len(data)  # Computed once
     return [item for item in data if item > average]
 
