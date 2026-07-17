@@ -33,8 +33,7 @@ class TestStringOperations(unittest.TestCase):
         n = 100
         slow_result = slow_string_concatenation(n)
         fast_result = fast_string_concatenation(n)
-        # Remove trailing comma from slow result for comparison
-        self.assertEqual(slow_result.rstrip(','), fast_result)
+        self.assertEqual(slow_result, fast_result)
     
     def test_efficient_string_building(self):
         """Test efficient string building"""
@@ -110,6 +109,10 @@ class TestDataProcessing(unittest.TestCase):
         slow_result = sorted(process_data_with_repeated_computation(data))
         fast_result = sorted(process_data_with_cached_computation(data))
         self.assertEqual(slow_result, fast_result)
+
+    def test_cached_computation_empty_list(self):
+        """Test that cached computation handles empty list without crashing"""
+        self.assertEqual(process_data_with_cached_computation([]), [])
     
     def test_generator_processing(self):
         """Test generator-based processing"""

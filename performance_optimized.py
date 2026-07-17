@@ -12,7 +12,7 @@ def fast_string_concatenation(n=10000):
     Efficient: Using join() with a list
     Time Complexity: O(n)
     """
-    return ",".join(str(i) for i in range(n))
+    return ",".join(str(i) for i in range(n)) + ","
 
 
 # OPTIMIZATION 2: Use sets for O(1) lookups

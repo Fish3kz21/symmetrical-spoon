@@ -74,7 +74,7 @@ def build_message_slow(items):
     return message
 
 # Issue 7: Not using appropriate data structures
-def find_duplicates_slow(items):
+def find_duplicates_nested_slow(items):
     """O(n²) complexity using nested loops"""
     duplicates = []
     for i in range(len(items)):
