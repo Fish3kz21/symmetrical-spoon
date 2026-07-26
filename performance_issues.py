@@ -4,7 +4,6 @@ These are examples of SLOW and INEFFICIENT implementations.
 """
 
 import time
-import random
 
 
 # ISSUE 1: Inefficient list concatenation in a loop

@@ -3,7 +3,6 @@ This file demonstrates OPTIMIZED versions of the performance issues.
 These implementations are FAST and EFFICIENT.
 """
 
-import time
 from functools import lru_cache
 
 

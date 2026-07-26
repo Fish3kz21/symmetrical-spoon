@@ -66,7 +66,10 @@ def run_benchmarks():
     
     print(f"   Slow (string +=):     {slow_time:.4f} seconds")
     print(f"   Fast (join):          {fast_time:.4f} seconds")
-    print(f"   Improvement:          {slow_time/fast_time:.2f}x faster")
+    if fast_time > 0:
+        print(f"   Improvement:          {slow_time/fast_time:.2f}x faster")
+    else:
+        print(f"   Improvement:          instant (fast_time too small to measure)")
     print()
     
     # Benchmark 2: Finding duplicates
@@ -103,7 +106,10 @@ def run_benchmarks():
     
     print(f"   Slow (recursive):     {slow_time:.4f} seconds")
     print(f"   Fast (memoized):      {fast_time:.6f} seconds")
-    print(f"   Improvement:          {slow_time/fast_time:.2f}x faster")
+    if fast_time > 0:
+        print(f"   Improvement:          {slow_time/fast_time:.2f}x faster")
+    else:
+        print(f"   Improvement:          instant (fast_time too small to measure)")
     print()
     
     # Benchmark 4: Data processing with repeated computation
@@ -125,7 +131,10 @@ def run_benchmarks():
     
     print(f"   Slow (recomputing):   {slow_time:.4f} seconds")
     print(f"   Fast (cached):        {fast_time:.4f} seconds")
-    print(f"   Improvement:          {slow_time/fast_time:.2f}x faster")
+    if fast_time > 0:
+        print(f"   Improvement:          {slow_time/fast_time:.2f}x faster")
+    else:
+        print(f"   Improvement:          instant (fast_time too small to measure)")
     print()
     
     # Benchmark 5: String building
