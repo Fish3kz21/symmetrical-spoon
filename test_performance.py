@@ -110,9 +110,7 @@ class TestDataProcessing(unittest.TestCase):
         fast_result = sorted(process_data_with_cached_computation(data))
         self.assertEqual(slow_result, fast_result)
 
-    def test_cached_computation_empty_list(self):
-        """Test that cached computation handles empty list without crashing"""
-        self.assertEqual(process_data_with_cached_computation([]), [])
+    def test_cached_computation_empty_list(self)  self.assertEqual(process_data_with_cached_computation([]), [])
     
     def test_generator_processing(self):
         """Test generator-based processing"""
